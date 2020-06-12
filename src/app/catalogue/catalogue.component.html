@@ -1,0 +1,65 @@
+<div class="space-bottom container center" *ngFor="let catalogue of catalogues">
+
+  <div *ngIf="catalogue.categories.categories.length > 1">
+    <h1 class="title">Categories</h1>
+    <mat-card class="example-card card-categories container center">
+      <mat-card-content>
+        <ngb-carousel class="carousel">
+          <ng-template ngbSlide *ngFor="let category of catalogue.categories.categories">
+            <div class="picsum-img-wrapper" (click)="getSubCatalogue(category.id)">
+              <img class="mat-card-image" src="https://api.tissini.app/{{category.image}}" alt="{{category.name}}">
+            </div>
+          </ng-template>
+        </ngb-carousel>         
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+    <div class="container center">
+      <h1 class="title">Products</h1>
+    
+        <div *ngFor="let products of catalogue.products">
+        <mat-card class="container center example-card" *ngIf="products.images.length == 1">
+          <mat-card-content>
+            <img class="mat-card-image" src="https://api.tissini.app/{{products.images[0].url}}" alt="{{products.name}}">
+          </mat-card-content>
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip color="accent" selected>
+                <span class="material-icons">add_shopping_cart</span>
+                Add
+              </mat-chip>
+              <div class="flex-spacer"></div>
+              <p class="price">${{products.price}}</p> 
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+    
+        <mat-card *ngIf="products.images.length > 1" class="container center example-card">
+          <mat-card-content>
+            <ngb-carousel class="carousel">
+              <ng-template ngbSlide *ngFor="let images of products.images">
+                <div class="picsum-img-wrapper">
+                  <img class="mat-card-image" src="https://api.tissini.app/{{images.url}}" alt="{{products.name}}">
+                </div>
+              </ng-template>
+            </ngb-carousel>         
+          </mat-card-content>
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip color="accent" selected>
+                <span class="material-icons">add_shopping_cart</span>
+                Add
+              </mat-chip>
+              <div class="flex-spacer"></div>
+              <p class="price">${{products.price}}</p> 
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>   
+      </div>
+
+      
+    
+    </div>
+  </div>

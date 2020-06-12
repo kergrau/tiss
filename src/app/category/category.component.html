@@ -1,0 +1,37 @@
+
+  <div class="space-bottom container col-sm-6 center">
+    <img src="https://mitienda.moda/img/productos-de-entrega-inmediata.e07d1e57.png" alt="productos-de-entrega-inmediata">
+    <h1 class="letters title">Lineas</h1>
+  </div>
+  
+  
+  
+  <div class="container center" *ngFor="let category of categories">
+    <div *ngFor="let cat of category">
+      <img [routerLink]="['/catalogue', cat.id]"
+      src="https://api.tissini.app/{{cat.image}}" alt="{{cat.name}}">
+    </div>
+  </div>
+  
+  
+  <div class="container center" *ngFor="let section of sections">
+    <div class="container center" *ngFor="let sec of section">
+      <img class="col-sm-7" src="https://api.tissini.app/{{sec.image}}" alt="{{sec.name}}">
+      <div class='container col center'>
+        <div class='row col-sm-7 center'>
+          <div class='col-sm-6' *ngFor="let products of sec.products">
+            <mat-card class="example-card" [routerLink]="['/catalogue', products.category_id]">
+              <mat-card-content>
+                <img class="mat-card-image" src="https://api.tissini.app/{{products.image.url}}" alt="{{products.name}}">
+              </mat-card-content>
+              <mat-card-actions>
+                <p class="letters">{{products.categories.category.toUpperCase()}}</p>
+                <p style="font-family: Montserrat,sans-serif;">{{products.name}}</p>
+                <p class="price">${{products.price}}</p>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

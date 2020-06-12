@@ -1,0 +1,30 @@
+
+<body> 
+  <div class="container vertical align-middle">
+    <mat-card class="m-card">
+      <mat-card-header class="m-card-h">
+        <p class="center">
+          <img class="logo" src="https://mitienda.moda/img/logo.c752bf8f.png" alt="">
+        </p>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <h3 class="statement">Ingresa el número de teléfono de tu asesora independiente.</h3>
+        <form class="form-register">
+          <p>
+            <mat-form-field class="inp-register" appearance="legacy">
+              <mat-label class="label">Phone</mat-label>
+              <input (keypress)="numberOnly($event)" type="text"
+                [(ngModel)]="mobilephone" name="mobilephone" class="input" matInput autofocus required>
+            </mat-form-field>
+          </p>
+    
+        </form>
+      </mat-card-content>
+      <mat-card-actions class="m-card-act">
+        <button class="btn-reg" mat-raised-button (click)="login()">Sign In</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</body>

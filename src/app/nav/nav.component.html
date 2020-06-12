@@ -1,0 +1,16 @@
+<mat-toolbar color="white">
+  <mat-toolbar-row>
+
+    <ul class="ul">
+      <li>
+        <button mat-button class="outline title" routerLink="/category">{{ title }}</button>
+      </li>
+    </ul>
+
+    <div class="flex-spacer"></div>
+    <button mat-button  class="outline title" (click)="logout()">
+      <i class="material-icons">exit_to_app</i>
+    </button>
+    
+  </mat-toolbar-row>
+</mat-toolbar>

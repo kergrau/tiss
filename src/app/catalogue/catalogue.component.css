@@ -1,0 +1,46 @@
+.example-card {
+  max-width: 320px;
+  max-height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+  color: #9e9e9e !important;
+  caret-color: #9e9e9e !important;
+  font-size: 28px;
+}
+
+.card-categories {
+  padding: 0px
+}
+
+.space-bottom {
+  margin-top: 15px;
+}
+
+.mat-card-image {
+	width: calc(100% + 32px);
+	margin: 0 -16px 16px -16px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.price{
+  font-family: Montserrat,sans-serif;
+  font-size: 18px;
+  color: #e91e63 !important;
+  caret-color: #e91e63 !important;
+  align-self: flex-end;
+  float: right;
+}
+
+.flex-spacer{
+  flex-grow: 1;
+}

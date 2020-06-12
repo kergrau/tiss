@@ -1,0 +1,87 @@
+body {
+  background-image: url("https://mitienda.moda/img/login-desktop.0a0cacb5.jpg");
+  background-color: #cccccc;
+  font-family: Montserrat,sans-serif !important;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .m-card {
+  box-shadow: none;
+  max-width: 400px;
+  max-height: 500px;
+  margin: auto;
+  padding: 0px, 0px, 25px, 0px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  margin: auto;
+  width: 60%;
+}
+
+.m-card-t {
+  margin: 15px 0px !important;
+  font-size: 18px;
+}
+
+.statement {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.label {
+  /*change color of label*/
+  font-size: 15px;
+  color: white!important;
+}
+
+.inp-register {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 13px;
+  width: 300px;
+  border: white 2px solid;
+  border-radius: 5px;
+  color: white;
+}
+
+.form-register{
+  text-align: center;
+  margin-top: 20px !important;
+}
+
+.m-card-act {
+  text-align: center;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+.btn-reg {
+  font-size: 13px;
+  padding: 0px 22px;
+}
+
+#signup{
+  margin-top: 0px;
+  margin-left: 50px;
+  font-size: 13px;
+  color: #629ace;
+}
+
+.marout{
+  margin-bottom: 0px;
+}
+a:link{
+  text-decoration: none;
+}
