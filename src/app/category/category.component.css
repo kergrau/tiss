@@ -1,8 +1,14 @@
+/*
 .center{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc(98% - 60px);
+}
+*/
+
+.cent {
+  margin: auto;
 }
 
 .space-bottom {
@@ -23,6 +29,7 @@
 .img-section {
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .example-card {
@@ -42,10 +49,11 @@
   caret-color: #e91e63 !important;
 }
 
-
+/*
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
+*/

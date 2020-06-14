@@ -1,24 +1,25 @@
-
-  <div class="space-bottom container col-sm-6 center">
-    <img src="https://mitienda.moda/img/productos-de-entrega-inmediata.e07d1e57.png" alt="productos-de-entrega-inmediata">
-    <h1 class="letters title">Lineas</h1>
+  <div class="container center">
+    <div class="space-bottom container col-sm-6 center">
+      <img class="img-section" src="https://mitienda.moda/img/productos-de-entrega-inmediata.e07d1e57.png" alt="productos-de-entrega-inmediata">
+      <h1 class="letters title">Lineas</h1>
+    </div>
   </div>
-  
-  
-  
+
   <div class="container center" *ngFor="let category of categories">
-    <div *ngFor="let cat of category">
-      <img [routerLink]="['/catalogue', cat.id]"
+    <div class="col-sm-6 cent" *ngFor="let cat of category">
+      <img class="img-section" [routerLink]="['/catalogue', cat.id]"
       src="https://api.tissini.app/{{cat.image}}" alt="{{cat.name}}">
     </div>
   </div>
-  
-  
+
   <div class="container center" *ngFor="let section of sections">
-    <div class="container center" *ngFor="let sec of section">
-      <img class="col-sm-7" src="https://api.tissini.app/{{sec.image}}" alt="{{sec.name}}">
-      <div class='container col center'>
-        <div class='row col-sm-7 center'>
+    <div class="container " *ngFor="let sec of section">
+      <div class="col-sm-7 cent">
+        <img class="img-section" src="https://api.tissini.app/{{sec.image}}" alt="{{sec.name}}">
+      </div>
+      
+      <div class='container col'>
+        <div class='row cent col-sm-7'>
           <div class='col-sm-6' *ngFor="let products of sec.products">
             <mat-card class="example-card" [routerLink]="['/catalogue', products.category_id]">
               <mat-card-content>
